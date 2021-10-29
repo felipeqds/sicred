@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import './global.scss';
+import Login from './views/Login/';
+import List from './views/Dragons/index';
+import Create from './views/Dragons/Create';
+import Edit from './views/Dragons/Edit';
+import Detail from './views/Dragons/Detail';
+
+const isLogged = localStorage.getItem('logged');
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          { isLogged ? <Redirect to="/dragons" /> : <Login /> }
+        </Route>
+        <Route exact path="/dragons">
+        { isLogged ? <List /> : <Redirect to="/" />}
+        </Route>
+        <Route exact path="/dragons/create">
+        { isLogged ? <Create /> : <Redirect to="/" />}
+        </Route>
+        <Route exact path="/dragons/edit/:dragonId">
+        { isLogged ? <Edit /> : <Redirect to="/" />}
+        </Route>
+        <Route exact path="/dragons/detail/:dragonId">
+        { isLogged ? <Detail /> : <Redirect to="/" />}
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('index')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
