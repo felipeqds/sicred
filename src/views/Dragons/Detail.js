@@ -5,7 +5,6 @@ import { useParams } from 'react-router';
 import PageHeader from '../../components/Header';
 import './style.scss';
 
-
 function Edit() {
   document.title = "Detalhes Dragões";
 
@@ -20,8 +19,6 @@ function Edit() {
     }
     getDragon();
 }, []);
-
-
 
   return (
     <div className="dragons">

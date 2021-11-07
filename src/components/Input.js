@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Input({ type,name,id,value,onchance,rows }) {
+function Input({ type,name,id,value,onchange,rows }) {
      
   if( type !== "textarea"){
     return(
@@ -10,7 +10,7 @@ function Input({ type,name,id,value,onchance,rows }) {
           id={id}
           required
           value={value}
-          onChange={onchance }
+          onChange={onchange}
       />
     )
   } else{
@@ -19,7 +19,7 @@ function Input({ type,name,id,value,onchance,rows }) {
         name={name}
         id={id}
         rows={rows}
-        onChange={onchance}
+        onChange={onchange}
         defaultValue={ value }
       ></textarea>
     )

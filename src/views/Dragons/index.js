@@ -85,7 +85,7 @@ function Dragons() {
                 <td>                            
                   <img onClick={ () => view(dragon.id)} src="https://cdn-icons-png.flaticon.com/512/65/65000.png" alt="View button" width="25px" />
                   <img onClick={ () => edit(dragon.id)} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Feedbin-Icon-home-edit.svg/34px-Feedbin-Icon-home-edit.svg.png" alt="Edit button" width="25px" />
-                  <img onClick={ () => submit(dragon.id)} src="https://cdn.icon-icons.com/icons2/868/PNG/512/trash_bin_icon-icons.com_67981.png" alt="Delete button" width="25px" />                            
+                  <img onClick={ () => submit(dragon.id)} src="https://static.vecteezy.com/system/resources/thumbnails/000/378/282/small/Basic_Elements__28125_29.jpg" alt="Delete button" width="25px" />                            
                 </td>
                   <td>{ dragon.name}</td>
                   <td>{ dragon.type}</td>

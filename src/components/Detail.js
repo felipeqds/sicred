@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import api from '../api';
-import Input from './Input';
 
 
 function EditDragon() {
@@ -14,7 +13,6 @@ function EditDragon() {
     const [type, setType] = useState('');
     const [histories, setHistories] = useState('');
 
-    const title = `Detalhar: ${dragon.name}`;
 
     useEffect(() => {
       async function getDragon() {

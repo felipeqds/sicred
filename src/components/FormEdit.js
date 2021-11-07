@@ -14,7 +14,6 @@ function EditDragon() {
     const [type, setType] = useState('');
     const [histories, setHistories] = useState('');
 
-    const title = `Editar: ${dragon.name}`;
 
     useEffect(() => {
       async function getDragon() {
@@ -41,7 +40,7 @@ function EditDragon() {
         <form className="forms-box" onSubmit={ handleUpdateDragon }>
           <div className="forms-box--group">
             <label htmlFor="name">Nome:</label>
-            <Input type="text" name="name" id="name" value={name} onchange={e => setType(e.target.value)} />
+            <Input type="text" name="name" id="name" value={name} onchange={e => setName(e.target.value)} />
           </div>
           <div className="forms-box--group">
             <label htmlFor="type">Tipagem:</label>
@@ -53,7 +52,7 @@ function EditDragon() {
               name="histories"
               id="histories"
               rows="10"
-              onChange={e => setHistories(e.target.value)}
+              onchange={e => setHistories(e.target.value)}
               defaultValue={ histories }
             ></textarea>
           </div>
