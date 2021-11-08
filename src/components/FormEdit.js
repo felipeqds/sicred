@@ -6,8 +6,7 @@ import Input from './Input';
 
 
 function EditDragon() {
-    document.title = "Drago333ns :: Edit";
-
+document.title ="Editar Dragões";
     const { dragonId } = useParams();
     const [dragon, setDragon] = useState({})
     const [name, setName] = useState('');
