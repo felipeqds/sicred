@@ -47,7 +47,7 @@ function Create({onSubmit,title}) {
         </div>
         <div className="forms-box--group">
           <label htmlFor="type">Tipagem:</label>
-          <Input type="text" name="type" id="type" value={name} onchange={e => setType(e.target.value)} />
+          <Input type="text" name="type" id="type" value={type} onchange={e => setType(e.target.value)} />
         </div>
         <div className="forms-box--group">
           <label htmlFor="histories">Descrição:</label>
